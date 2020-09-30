@@ -1,1 +1,1 @@
-# nextjs-weather-app
+# reactjs-weather-app
