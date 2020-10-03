@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+/**
+ * Create a structure for new components
+ */
+
+const path = require("path");
+const { writeFile, mkdir } = require("fs").promises;
+const rimraf = require("rmfr");
+
+const COMPONENT_EXTENSIONS = [".js", ".scss", ".test.js"];
+
+// Resolves a path within src/components directory
+const resolveCachePath = (filePath) =>
+  path.resolve(__dirname, "../src/components", filePath);
+
+// Writes a file to the src/components directory
+async function writeCompoenentFile(filename) {
+  const filepath = resolveCachePath(filename);
+  return writeFile(filepath, "");
+}
+
+async function main() {
+  const component_name = process.argv.slice(2)[0];
+
+  // Create new component directory in src/components
+  await mkdir(resolveCachePath(component_name));
+
+  // For each extension type create new files
+  for (const extension of COMPONENT_EXTENSIONS) {
+    await writeCompoenentFile(
+      `${component_name}/${component_name}${extension}`
+    );
+  }
+}
+
+main()
+  .then(() => console.log("Added new component successfully"))
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
