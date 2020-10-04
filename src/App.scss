@@ -2,13 +2,20 @@
   width: 100%;
   background-color: #D0D5DB;
   min-height: 100vh;
+  font-family: 'Roboto';
   &__wrapper{
     flex: 1;
     position: relative;
     padding: 20px 30px;
+    justify-content: space-between;
+  }
+
+  &__main{
+
   }
 }
 
 .flex{
   display: flex;
+  flex-direction: column;
 }

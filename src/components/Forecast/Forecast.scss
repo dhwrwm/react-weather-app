@@ -1,0 +1,14 @@
+.Forecast{
+    display: flex;
+    overflow-x: scroll;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    max-width: 100%;
+    margin-top: 50px;
+    &__hour{
+        margin: auto 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+}

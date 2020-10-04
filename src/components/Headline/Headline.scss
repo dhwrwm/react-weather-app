@@ -1,0 +1,50 @@
+.Headline{
+    width: fit-content;
+    &__text{
+        font-family: 'Raleway', sans-serif;
+        font-size: 4rem;
+        line-height: .96em;
+        font-weight: 700;
+    }
+
+    &__details{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__detail-items{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &__item-seperator{
+        margin: 10px auto;
+        border: 1px solid rgba(0,0,0,.15);
+        width: 100%;
+    }
+
+    &__details-title{
+        font-size: 16px;
+        line-height: 1.25;
+        margin-right: 8px;
+    }
+
+    &__details-unit{
+        font-size: 16px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+        align-self: center;
+        &__text{
+            font-size: 3rem;
+        }
+        &__details{
+            display: none;
+        }
+    }
+}

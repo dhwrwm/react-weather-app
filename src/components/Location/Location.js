@@ -1,12 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 import "./Location.scss";
 
 const Location = (props) => {
-  return <div className="Location">San Francisco</div>;
-};
+  const {
+    data: { timezone },
+  } = useSelector((state) => state);
 
-Location.propTypes = {};
+  if (!timezone) {
+    return null;
+  }
+  return <div className="Location">{timezone}</div>;
+};
 
 export default Location;

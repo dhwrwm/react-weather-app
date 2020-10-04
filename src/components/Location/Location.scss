@@ -1,8 +1,16 @@
 
 .Location{
-    border: 1px solid black;
     border-radius: 30px;
-    padding: 10px;
+    padding: 10px 16px;
     position: absolute;
     right: 30px;
+    background-color: #ffffff;
+    color: #424242;
+    text-align: center;
+    @media (max-width: 768px) {
+        position: initial;
+        margin-top: 20px;
+        align-self: center;
+        font-size: 1.5rem;
+    }
 }

@@ -1,12 +1,34 @@
 .Days{
-    align-self: flex-end;
     display: flex;
+    margin-top: 30px;
+    max-width: 100%;
+    overflow-x: auto;
     &__day{
-        display: inherit;
-        margin: auto 8px;
-        border: 1px solid black;
-        border-radius: 30px;
+        margin:auto 8px;
         padding: 10px 5px;
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ffffff;
+        border-radius: 30px;
+        justify-content: space-between;
+        height: 100px;
+        cursor: pointer;
+        &.today{
+            color: #424242;
+            background-color: white;
+            cursor: initial;
+        }
+    }
+    &__weekday{
+        color: inherit;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    &__temperature{
+        color: inherit;
+        font-size: 15px;
+        font-weight: 700;
     }
 }

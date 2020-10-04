@@ -1,0 +1,22 @@
+.Temperature{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    &__number{
+        font-size: 3.5rem;
+        line-height: .96em;
+        font-weight: 500;
+    }
+
+    &__unit{
+        font-size: 0.5em;
+    }
+
+    @media (max-width: 768px) {
+        position: initial;
+        align-self: center;
+        &__number{
+            font-size: 10rem;
+        }
+    }
+}
