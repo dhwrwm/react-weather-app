@@ -1,0 +1,6 @@
+export const WEATHER_API_URL =
+  "https://api.openweathermap.org/data/2.5/onecall";
+
+export const WEATHER_FORCAST_REQUESTED = "WEATHER_FORCAST_REQUESTED";
+export const WEATHER_FORCAST_SUCCEEDED = "WEATHER_FORCAST_SUCCEEDED";
+export const WEATHER_FORCAST_FAILED = "WEATHER_FORCAST_FAILED";

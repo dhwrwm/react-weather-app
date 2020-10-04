@@ -1,0 +1,14 @@
+.App {
+  width: 100%;
+  background-color: #D0D5DB;
+  min-height: 100vh;
+  &__wrapper{
+    flex: 1;
+    position: relative;
+    padding: 20px 30px;
+  }
+}
+
+.flex{
+  display: flex;
+}
