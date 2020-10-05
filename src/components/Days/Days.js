@@ -18,7 +18,6 @@ const Days = (props) => {
     toggleModal(true);
   };
 
-  console.log("is modal open", isModalOpen);
   return (
     <div className="Days">
       {daily &&
@@ -45,7 +44,7 @@ const Days = (props) => {
           );
         })}
 
-      {isModalOpen && (
+      {isModalOpen && selectedForecast && (
         <DetailsModal
           timezone_offset={timezone_offset}
           details={selectedForecast}

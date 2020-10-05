@@ -19,4 +19,20 @@
             font-size: 10rem;
         }
     }
+
+    @media (max-width: 768px) {
+        position: initial;
+        align-self: center;
+        &__number{
+            font-size: 10rem;
+        }
+    }
+
+    @media (min-width: 908px) {
+        position: initial;
+        align-self: center;
+        &__number{
+            font-size: 10rem;
+        }
+    }
 }
