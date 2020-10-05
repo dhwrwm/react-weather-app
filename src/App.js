@@ -17,8 +17,7 @@ function App() {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
       const { latitude, longitude } = position.coords;
-      // console.log("Latitude is :", position.coords.latitude);
-      // console.log("Longitude is :", position);
+
       dispatch(getWeatherForcast(latitude, longitude));
     });
   }, []);

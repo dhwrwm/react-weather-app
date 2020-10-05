@@ -1,23 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 import cn from "classnames";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-// import { getWeatherForcast } from "../../redux/actions";
 import "./Days.scss";
+import DetailsModal from "../DetailsModal/DetailsModal";
 
 const Days = (props) => {
-  // const dispatch = useDispatch();
+  const [isModalOpen, toggleModal] = useState(false);
+  const [selectedForecast, setSelectedForecast] = useState(null);
   const {
     data: { daily, timezone_offset },
   } = useSelector((state) => state);
 
-  // const onSelectDay = (dt) => {
-  //   navigator.geolocation.getCurrentPosition(function (position) {
-  //     const { latitude, longitude } = position.coords;
-  //     dispatch(getWeatherForcast(latitude, longitude, dt));
-  //   });
-  // };
+  const onSelectDay = (forecast) => {
+    setSelectedForecast(forecast);
+    toggleModal(true);
+  };
+
+  console.log("is modal open", isModalOpen);
   return (
     <div className="Days">
       {daily &&
@@ -31,7 +32,7 @@ const Days = (props) => {
             <div
               key={index}
               className={cn("Days__day", { today: index === 0 })}
-              // onClick={() => onSelectDay(dt)}
+              onClick={() => onSelectDay(day)}
             >
               <div className="Days__weekday">{weekday}</div>
               <img
@@ -43,6 +44,15 @@ const Days = (props) => {
             </div>
           );
         })}
+
+      {isModalOpen && (
+        <DetailsModal
+          timezone_offset={timezone_offset}
+          details={selectedForecast}
+          isOpen={isModalOpen}
+          closeModal={() => toggleModal(false)}
+        />
+      )}
     </div>
   );
 };

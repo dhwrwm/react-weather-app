@@ -1,0 +1,44 @@
+.Details{
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+    flex-direction: column;
+    &__block-title{
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        line-height: .96em;
+        font-weight: 600;
+    }
+    &__date{
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__heading{
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        line-height: .96em;
+        font-weight: 500;
+    }
+
+    &__image{
+        width: 50px;
+        height: 50px;
+        margin: 20px auto;
+    }
+
+    .Headline__details{
+        margin-top: 0;
+    }
+
+    .Temperature__unit{
+        font-size: 0.75em;
+    }
+
+    @media (max-width: 768px) {
+        .Headline__details{
+            display: block ;
+        }
+    }
+}

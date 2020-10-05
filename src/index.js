@@ -4,9 +4,11 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
+import Modal from "react-modal";
 
 import configureStore from "./redux/store";
 const { store } = configureStore();
+Modal.setAppElement("#root");
 
 ReactDOM.render(
   <React.StrictMode>
