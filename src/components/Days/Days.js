@@ -56,6 +56,4 @@ const Days = (props) => {
   );
 };
 
-Days.propTypes = {};
-
 export default Days;
