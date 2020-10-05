@@ -11,8 +11,17 @@
     justify-content: space-between;
   }
 
-  &__main{
-
+  &__enable-location{
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #fffff1;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
   }
 }
 
